@@ -1,12 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>ID CO. Impulso Digital</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID CO. Impulso Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body>
-    <h1>Bem-vindo à ID CO. Impulso Digital</h1>
-    <p>Trabalhamos com IA, tecnologia, engenharia e base estatística para alavancar sua empresa.</p>
+<body class="bg-gray-900 text-white">
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-gray-950 bg-opacity-90 shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">ID CO.</h1>
+      <nav class="space-x-6">
+        <a href="#sobre" class="hover:text-blue-400 transition">Sobre</a>
+        <a href="#servicos" class="hover:text-blue-400 transition">Serviços</a>
+        <a href="#contato" class="hover:text-blue-400 transition">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center text-center px-6 pt-32">
+    <div class="space-y-6">
+      <h2 class="text-4xl md:text-5xl font-bold animate-fadeInUp">Impulso Digital com Inteligência Artificial</h2>
+      <p class="text-xl text-gray-300 animate-fadeInUp delay-100">Acelere seu crescimento com automação e estratégia.</p>
+      <a href="#servicos" class="mt-4 inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-white font-semibold transition">Ver Serviços</a>
+    </div>
+  </section>
+
+  <!-- Sobre nós -->
+  <section id="sobre" class="px-6 py-24 bg-gray-800">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <h3 class="text-3xl font-bold">Sobre Nós</h3>
+      <p class="text-gray-300">Somos uma agência de marketing digital especializada em criação de sites, redes sociais e automação inteligente. Nossa equipe combina criatividade humana com eficiência da IA para entregar resultados reais.</p>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="px-6 py-24">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-12">🚀 Serviços</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
+          <h4 class="text-xl font-semibold">Criação de Sites</h4>
+          <p class="text-gray-400 text-sm mt-2">Sites responsivos e bonitos que convertem.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
+          <h4 class="text-xl font-semibold">Gestão de Redes</h4>
+          <p class="text-gray-400 text-sm mt-2">Conteúdo estratégico e aumento de engajamento.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
+          <h4 class="text-xl font-semibold">Inteligência Artificial</h4>
+          <p class="text-gray-400 text-sm mt-2">Automatize tarefas e vendas com IA.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
+          <h4 class="text-xl font-semibold">Consultoria Estratégica</h4>
+          <p class="text-gray-400 text-sm mt-2">Planejamento digital focado em resultados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="px-6 py-24 bg-gray-800 text-center">
+    <h3 class="text-3xl font-bold mb-6">Vamos acelerar seu crescimento?</h3>
+    <p class="mb-8 text-gray-300">Fale com a nossa equipe através de um dos canais abaixo:</p>
+    <div class="flex justify-center space-x-6">
+      <a href="https://wa.me/seunumerowhats" target="_blank" class="bg-green-600 hover:bg-green-700 px-5 py-3 rounded-xl font-semibold">WhatsApp</a>
+      <a href="https://instagram.com/seuusuario" target="_blank" class="bg-pink-500 hover:bg-pink-600 px-5 py-3 rounded-xl font-semibold">Instagram</a>
+      <a href="mailto:contato@seudominio.com" class="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-xl font-semibold">E-mail</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 bg-gray-950">
+    <p>&copy; 2025 ID CO. Impulso Digital. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Simple animations -->
+  <style>
+    .animate-fadeInUp {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    .delay-100 {
+      animation-delay: 0.3s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </body>
 </html>
