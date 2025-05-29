@@ -1,104 +1,544 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ID CO. Impulso Digital</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID CO. Impulso Digital - Marketing com IA e Engenharia de Dados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+        }
+        .btn-orange {
+            background-color: #f97316;
+            transition: all 0.3s ease;
+        }
+        .btn-orange:hover {
+            background-color: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
+        }
+        .btn-outline {
+            border: 2px solid #f97316;
+            color: #f97316;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background-color: #f97316;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .service-card {
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid #f97316;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #f97316;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #f97316;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white">
-  <!-- Header -->
-  <header class="fixed top-0 w-full bg-gray-950 bg-opacity-90 shadow-md z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-white">ID CO.</h1>
-      <nav class="space-x-6">
-        <a href="#sobre" class="hover:text-blue-400 transition">Sobre</a>
-        <a href="#servicos" class="hover:text-blue-400 transition">Serviços</a>
-        <a href="#contato" class="hover:text-blue-400 transition">Contato</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center text-center px-6 pt-32">
-    <div class="space-y-6">
-      <h2 class="text-4xl md:text-5xl font-bold animate-fadeInUp">Impulso Digital com Inteligência Artificial</h2>
-      <p class="text-xl text-gray-300 animate-fadeInUp delay-100">Acelere seu crescimento com automação e estratégia.</p>
-      <a href="#servicos" class="mt-4 inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-white font-semibold transition">Ver Serviços</a>
-    </div>
-  </section>
-
-  <!-- Sobre nós -->
-  <section id="sobre" class="px-6 py-24 bg-gray-800">
-    <div class="max-w-4xl mx-auto text-center space-y-4">
-      <h3 class="text-3xl font-bold">Sobre Nós</h3>
-      <p class="text-gray-300">Somos uma agência de marketing digital especializada em criação de sites, redes sociais e automação inteligente. Nossa equipe combina criatividade humana com eficiência da IA para entregar resultados reais.</p>
-    </div>
-  </section>
-
-  <!-- Serviços -->
-  <section id="servicos" class="px-6 py-24">
-    <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-12">🚀 Serviços</h3>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
-          <h4 class="text-xl font-semibold">Criação de Sites</h4>
-          <p class="text-gray-400 text-sm mt-2">Sites responsivos e bonitos que convertem.</p>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#home" class="flex items-center">
+                    <div class="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center mr-2">
+                        <span class="text-white font-bold text-xl">ID</span>
+                    </div>
+                    <span class="text-blue-900 font-bold text-xl">ID CO.</span>
+                    <span class="text-orange-500 font-bold text-xl ml-1">Impulso Digital</span>
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-blue-900 font-medium">Home</a>
+                <a href="#about" class="nav-link text-blue-900 font-medium">Quem Somos</a>
+                <a href="#services" class="nav-link text-blue-900 font-medium">Serviços</a>
+                <a href="#contact" class="nav-link text-blue-900 font-medium">Contato</a>
+            </nav>
+            
+            <div class="hidden md:flex space-x-4">
+                <a href="https://wa.me/15551234567" target="_blank" class="btn-orange text-white px-6 py-2 rounded-full font-medium">Solicitar Orçamento</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-blue-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
-          <h4 class="text-xl font-semibold">Gestão de Redes</h4>
-          <p class="text-gray-400 text-sm mt-2">Conteúdo estratégico e aumento de engajamento.</p>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full px-4 py-2 shadow-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="text-blue-900 font-medium py-2">Home</a>
+                <a href="#about" class="text-blue-900 font-medium py-2">Quem Somos</a>
+                <a href="#services" class="text-blue-900 font-medium py-2">Serviços</a>
+                <a href="#contact" class="text-blue-900 font-medium py-2">Contato</a>
+                <a href="https://wa.me/15551234567" target="_blank" class="btn-orange text-white px-6 py-2 rounded-full font-medium text-center">Solicitar Orçamento</a>
+            </div>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
-          <h4 class="text-xl font-semibold">Inteligência Artificial</h4>
-          <p class="text-gray-400 text-sm mt-2">Automatize tarefas e vendas com IA.</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white pt-32 pb-20 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    Marketing com <span class="text-orange-500">IA</span>, Engenharia e <span class="text-orange-500">Resultado</span>
+                </h1>
+                <p class="text-xl mb-8 text-gray-300">
+                    Impulsionamos empresas nos EUA e Brasil com tecnologia de ponta, automações inteligentes e estratégias baseadas em dados.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://wa.me/15551234567" target="_blank" class="btn-orange text-white px-8 py-3 rounded-full font-medium text-center">
+                        Solicitar Orçamento
+                    </a>
+                    <a href="#services" class="btn-outline px-8 py-3 rounded-full font-medium text-center">
+                        Nossos Serviços
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Marketing Digital com IA" 
+                     class="rounded-xl shadow-2xl w-full h-auto object-cover">
+            </div>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
-          <h4 class="text-xl font-semibold">Consultoria Estratégica</h4>
-          <p class="text-gray-400 text-sm mt-2">Planejamento digital focado em resultados.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Quem Somos</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A ID CO. Impulso Digital é uma agência de marketing digital que combina inteligência artificial, engenharia de dados e estratégias comprovadas para escalar negócios.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Equipe ID CO." 
+                         class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">Nossa Missão</h3>
+                    <p class="text-gray-600 mb-6">
+                        Transformar dados em decisões estratégicas e resultados mensuráveis para nossos clientes. Utilizamos tecnologia de ponta para criar soluções personalizadas que impulsionam o crescimento sustentável.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-brain text-orange-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900 mb-2">Inteligência Artificial Aplicada</h4>
+                                <p class="text-gray-600">
+                                    Desenvolvemos algoritmos personalizados para prever comportamentos de consumo e otimizar campanhas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-chart-line text-orange-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900 mb-2">Engenharia de Dados</h4>
+                                <p class="text-gray-600">
+                                    Coletamos, processamos e analisamos dados para criar estratégias baseadas em evidências.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-globe-americas text-orange-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900 mb-2">Atuação Global</h4>
+                                <p class="text-gray-600">
+                                    Atendemos clientes nos EUA e Brasil, adaptando estratégias para cada mercado.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contato -->
-  <section id="contato" class="px-6 py-24 bg-gray-800 text-center">
-    <h3 class="text-3xl font-bold mb-6">Vamos acelerar seu crescimento?</h3>
-    <p class="mb-8 text-gray-300">Fale com a nossa equipe através de um dos canais abaixo:</p>
-    <div class="flex justify-center space-x-6">
-      <a href="https://wa.me/seunumerowhats" target="_blank" class="bg-green-600 hover:bg-green-700 px-5 py-3 rounded-xl font-semibold">WhatsApp</a>
-      <a href="https://instagram.com/seuusuario" target="_blank" class="bg-pink-500 hover:bg-pink-600 px-5 py-3 rounded-xl font-semibold">Instagram</a>
-      <a href="mailto:contato@seudominio.com" class="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-xl font-semibold">E-mail</a>
-    </div>
-  </section>
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Nossos Serviços</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Soluções completas de marketing digital impulsionadas por tecnologia e dados.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hashtag text-blue-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Gestão de Redes Sociais</h3>
+                    <p class="text-gray-600 mb-6">
+                        Estratégias personalizadas com IA para aumentar engajamento e conversões nas principais plataformas.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Instagram</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">LinkedIn</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">TikTok</span>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-blue-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Criação de Sites</h3>
+                    <p class="text-gray-600 mb-6">
+                        Desenvolvimento de websites otimizados para conversão, com tecnologia de ponta e design responsivo.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">WordPress</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">SEO</span>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-ad text-blue-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Tráfego Pago</h3>
+                    <p class="text-gray-600 mb-6">
+                        Campanhas altamente segmentadas com algoritmos de IA para maximizar ROI em anúncios digitais.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Google Ads</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Meta Ads</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">LinkedIn Ads</span>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-blue-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Branding e Identidade Visual</h3>
+                    <p class="text-gray-600 mb-6">
+                        Criação de marcas memoráveis com posicionamento estratégico e identidade visual impactante.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Logo</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Manual</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Posicionamento</span>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-blue-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Automações com CRM e WhatsApp</h3>
+                    <p class="text-gray-600 mb-6">
+                        Sistemas automatizados para gestão de relacionamento e comunicação eficiente via WhatsApp Business.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Zapier</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">WhatsApp API</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">HubSpot</span>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-blue-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Consultoria em Engenharia e Estatística</h3>
+                    <p class="text-gray-600 mb-6">
+                        Análise preditiva e modelagem estatística para tomada de decisões baseada em dados concretos.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm">Power BI</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16" data-aos="fade-up">
+                <a href="https://wa.me/15551234567" target="_blank" class="btn-orange text-white px-8 py-3 rounded-full font-medium inline-block">
+                    Fale com nossos especialistas
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-gray-500 bg-gray-950">
-    <p>&copy; 2025 ID CO. Impulso Digital. Todos os direitos reservados.</p>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Pronto para impulsionar seu negócio com tecnologia e dados? Fale com nossa equipe.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nome</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        <button type="submit" class="btn-orange text-white px-8 py-3 rounded-full font-medium w-full">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="bg-gray-50 p-8 rounded-xl h-full">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6">Outras formas de contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-orange-500 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900 mb-1">E-mail</h4>
+                                    <a href="mailto:contato@idcoimpulsodigital.com" class="text-gray-600 hover:text-orange-500">contato@idcoimpulsodigital.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                    <i class="fab fa-whatsapp text-orange-500 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900 mb-1">WhatsApp</h4>
+                                    <a href="https://wa.me/15551234567" target="_blank" class="text-gray-600 hover:text-orange-500">+1 (555) 123-4567</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-orange-500 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900 mb-1">Escritórios</h4>
+                                    <p class="text-gray-600">Miami, EUA</p>
+                                    <p class="text-gray-600">São Paulo, Brasil</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-6">
+                                <h4 class="font-bold text-blue-900 mb-4">Redes Sociais</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="social-icon text-blue-900 text-2xl">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="social-icon text-blue-900 text-2xl">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="social-icon text-blue-900 text-2xl">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="https://wa.me/15551234567" target="_blank" class="social-icon text-blue-900 text-2xl">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Simple animations -->
-  <style>
-    .animate-fadeInUp {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease-out forwards;
-    }
-    .delay-100 {
-      animation-delay: 0.3s;
-    }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-2">
+                            <span class="text-blue-900 font-bold text-xl">ID</span>
+                        </div>
+                        <span class="text-white font-bold text-xl">ID CO.</span>
+                        <span class="text-orange-500 font-bold text-xl ml-1">Impulso Digital</span>
+                    </a>
+                    <p class="text-gray-300 mb-4">
+                        Marketing digital com tecnologia de ponta para escalar seu negócio.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon text-white text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-icon text-white text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/15551234567" target="_blank" class="social-icon text-white text-xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Serviços</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-orange-500">Gestão de Redes Sociais</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-orange-500">Criação de Sites</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-orange-500">Tráfego Pago</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-orange-500">Branding</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-orange-500">Automações</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Links Úteis</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-orange-500">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-orange-500">Quem Somos</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-orange-500">Serviços</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-orange-500">Contato</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-orange-500">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">
+                        Assine nossa newsletter para receber dicas e novidades sobre marketing digital.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-12 pt-8 text-center text-gray-300">
+                <p>&copy; 2023 ID CO. Impulso Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add shadow to header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
 </body>
 </html>
